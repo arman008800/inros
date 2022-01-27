@@ -1,7 +1,10 @@
 * {margin: 0; padding: 0; box-sizing: border-box;}
+header.active {
+    background: #222;
+}
 header nav {
     height: 100px;
-    border-bottom: 1px solid rgb(192, 192, 192);
+/*    border-bottom: 1px solid rgb(192, 192, 192);*/
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -13,7 +16,7 @@ header nav .menu {
     height: 100%;
     align-items: center;
 }
-header nav .logo img{
+header nav .logo img {
     height: 40px;
 }
 header nav ul {
@@ -72,8 +75,12 @@ header nav .controls .search {
     color: #222;
 }
 header nav .controls .background {
-    font-size: 22px;
-    color: #3076df;
+    width: 22px;
+    background: #0b60df;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: 25px;
+    cursor: pointer;
 }
 #title {
     height: 440px;
@@ -81,6 +88,9 @@ header nav .controls .background {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+#title.active {
+    background: #222;
 }
 #title h1 {
     text-align: center;
@@ -106,10 +116,16 @@ header nav .controls .background {
 #block1 {
     padding-top: 50px;
 }
+#block1.active {
+    background: #222;
+}
 .subblock {
     display: flex;
     justify-content: space-between;
     padding-top: 25px;
+}
+.subblock.active {
+    background: #222;
 }
 #block1 .left-block {
     display: grid;
@@ -125,6 +141,9 @@ header nav .controls .background {
     height: 480px;
     /* border-radius: 30px; */
 }
+.item.active {
+    background: #222;
+} 
 #block1 .left-block .item img {
     height: 100%;
     width: 100%;
@@ -249,6 +268,9 @@ header nav .controls .background {
     display: grid;
     width: 290px;
 }
+.text.active {
+    background: #222;
+}
 .right-block .item .text p {
     font: 23px sans-serif;
     font-weight: 600;
@@ -298,6 +320,9 @@ nav .menu ul {
 #block2 {
     padding-top: 140px;
     display: grid;
+}
+#block2.active {
+    background: #222;
 }
 #block2 .subblock {
     display: flex;
@@ -411,6 +436,19 @@ nav .menu ul {
     line-height: 40px;  
     cursor: pointer;
 }
+h1.active {
+    color: #fff !important;
+}
+h2.active {
+    color: #fff !important;
+}
+li.active {
+    color: #fff !important;
+}
+button.active {
+    color: #fff !important;
+    background: #222 !important;
+}
 #block2 .subblock .item h2:hover {
     text-decoration: underline;
 }
@@ -449,6 +487,9 @@ nav .menu ul {
     justify-content: space-between;
     height: 172px;
     align-items: center;
+}
+.subscribe-block.active {
+    background: #222;
 }
 #block2 .subscribe-block h2 {
     font: 3rem sans-serif;
@@ -496,6 +537,14 @@ nav .menu ul {
     background: #f9f9f9;
     margin-top: 60px;
 }
+#footer-block.active {
+    background: #222;
+}
+/*
+body.active {
+    background: #222;
+}
+*/
 #footer-block .subblock {
     padding-top: 60px;
 /*    border: 1px solid #000;*/
@@ -557,6 +606,7 @@ nav .menu ul {
     transition: .25s;
     color: #363636;
 }
+
 #footer-block .subblock .nav-list ul li a:hover {
     color: #267dff;
 }
@@ -565,11 +615,33 @@ nav .menu ul {
     font: 15px sans-serif;
     color: #5a5a5a;
 }
-
-
-
-
-
-
-
-
+a.active {
+    color: #fff !important;
+}
+p.active {
+    color: #fff !important;
+}
+h3.active {
+    color: #fff !important;
+}
+h4.active {
+    color: #fff !important;
+}
+h5.active {
+    color: #fff !important;
+}
+span.active {
+    color: #fff !important;
+}
+/*
+input::placeholder.active {
+    background: #222 !important;
+    color: #fff !important;
+}
+*/
+i.active {
+    color: #fff !important;
+}
+img.active {
+    
+}

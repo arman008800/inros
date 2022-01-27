@@ -1,11 +1,9 @@
-@media screen and (max-width: 768px) {
+@media screen and (max-width:1169px) {
     .container {
-        width: 580px;
+        width: 969px;
+    } 
+    #block1 .left-block .item {
+        width: 400px;
     }
-   header nav .menu ul {
-        display: none;
-    }
-    .title .text h1 {
-        width: 500px;
-    }
+    
 }
