@@ -1,0 +1,11 @@
+@media screen and (max-width: 768px) {
+    .container {
+        width: 580px;
+    }
+   header nav .menu ul {
+        display: none;
+    }
+    .title .text h1 {
+        width: 500px;
+    }
+}
