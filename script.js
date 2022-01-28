@@ -1,5 +1,6 @@
 const bgcolor = document.querySelector('.background');
 const head = document.querySelector('header');
+const nav = document.querySelector('header nav');
 const title = document.querySelector('#title');
 const block1 = document.querySelector('#block1');
 const block2 = document.querySelector('#block2');
@@ -18,12 +19,21 @@ const li = document.querySelectorAll('li');
 const p = document.querySelectorAll('p');
 //const input = document.querySelectorAll('input');
 const i = document.querySelectorAll('i');
-const img = document.querySelectorAll('img');
+//const sm = document.querySelector('.submenu');
+const ul = document.querySelector('.submenu ul');
+const img1 = document.querySelector('.img1');
+const img2 = document.querySelector('.img2');
+const img3 = document.querySelector('.img3');
+const img4 = document.querySelector('.img4');
 
+
+let bool = true;
+let b = 0;
 
 bgcolor.onclick = () => {
     title.classList.toggle('active');
     head.classList.toggle('active');
+    nav.classList.toggle('active');
     block1.classList.toggle('active');
     block2.classList.toggle('active');
     fb.classList.toggle('active');
@@ -63,13 +73,47 @@ bgcolor.onclick = () => {
     i.forEach(item11 => {
         item11.classList.toggle('active'); 
     });
-    img.forEach(item12 => {
-        item12.classList.toggle('active'); 
-    });
+    
+    if (bool) {
+        document.body.style.background = '#222';
+        bool = false;
+    } 
+    else {
+        document.body.style.background = '#fff';
+        bool = true;
+    }
+    ul.classList.toggle('active');
+//    sm.classList.toggle('active');
+   
+    b++;
+    if (b == 1) {
+        img1.style.display = 'none';
+        img2.style.display = 'block';
+        img3.style.display = 'none';
+        img4.style.display = 'block';
+    } if (b == 2) {
+        img1.style.display = 'block';
+        img2.style.display = 'none';
+        img3.style.display = 'block';
+        img4.style.display = 'none';
+    }
+    b == 2 ? b = 0:'';
 };
 
+//let d = 0;
+//document.onmousewheel = () => {
+//    
+//    nav.style.height = '80px';  
+//};
 
-
-
+window.onscroll = () => {
+   if (window.scrollY > 50) {
+       nav.style.height = '80px';
+       nav.style.borderBottom = '1px solid #c5c5c5';
+   } else {
+       nav.style.height = '100px';
+       nav.style.borderBottom = '1px solid #fff';
+   }
+};
 
 

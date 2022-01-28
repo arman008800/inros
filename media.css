@@ -1,9 +1,14 @@
 @media screen and (max-width:1169px) {
     .container {
-        width: 969px;
+        width: 970px;
     } 
+    heade nave {
+        height: 70px;
+    }
     #block1 .left-block .item {
         width: 400px;
     }
-    
+    h1 {
+        width: 200px;
+    }
 }
